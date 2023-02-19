@@ -9,3 +9,26 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+
+# homebrew sbin
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+# add doom emacs to path
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# homebrew sbin
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+# add doom emacs to path
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# java home directory
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+#llvm
+#export PATH=/usr/local/Cellar/llvm/15.0.6/bin:$PATH
+#PATH="/usr/local/opt/llvm/bin:$PATH"
+#
