@@ -20,7 +20,6 @@ alias ctopi="ssh pi@192.168.178.43"
 
 alias vim="nvim"
 
-alias openbooks="/Users/sun/openbooks/openbooks_mac"
 # dotfiles repo
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
