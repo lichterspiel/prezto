@@ -18,10 +18,10 @@ fi
 #
 
 if [[ -z "$EDITOR" ]]; then
-  export EDITOR='nano'
+  export EDITOR='vim'
 fi
 if [[ -z "$VISUAL" ]]; then
-  export VISUAL='nano'
+  export VISUAL='vim'
 fi
 if [[ -z "$PAGER" ]]; then
   export PAGER='less'
@@ -49,10 +49,19 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/{,s}bin(N)
-  /opt/{homebrew,local}/{,s}bin(N)
-  /usr/local/{,s}bin(N)
-  $path
+    $HOME/.local/bin
+    $HOME/{,s}bin(N)
+    # add doom emacs to path
+    $HOME/.emacs.d/bin
+    #google cloud cli
+    $GCLOUD_DIR
+    # Homebrew binarys
+    /opt/{homebrew,local}/{,s}bin(N)
+    /usr/local/{,s}bin(N)
+    # add latex to path
+    /Library/TeX/texbin
+    $PYENV_ROOT/bin
+    $path
 )
 
 #
@@ -63,7 +72,7 @@ path=(
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X to enable it.
 if [[ -z "$LESS" ]]; then
-  export LESS='-g -i -M -R -S -w -X -z-4'
+  export LESS='-g -i -M -R -S -w -z-4'
 fi
 
 # Set the Less input preprocessor.
