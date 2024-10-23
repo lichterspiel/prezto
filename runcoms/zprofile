@@ -18,10 +18,10 @@ fi
 #
 
 if [[ -z "$EDITOR" ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 if [[ -z "$VISUAL" ]]; then
-  export VISUAL='vim'
+  export VISUAL='nvim'
 fi
 if [[ -z "$PAGER" ]]; then
   export PAGER='less'
@@ -51,16 +51,15 @@ typeset -gU cdpath fpath mailpath path
 path=(
     $HOME/.local/bin
     $HOME/{,s}bin(N)
-    # add doom emacs to path
-    $HOME/.emacs.d/bin
-    #google cloud cli
-    $GCLOUD_DIR
-    # Homebrew binarys
     /opt/{homebrew,local}/{,s}bin(N)
     /usr/local/{,s}bin(N)
     # add latex to path
     /Library/TeX/texbin
     $PYENV_ROOT/bin
+    # add doom emacs to path
+    $HOME/.emacs.d/bin
+    #google cloud cli
+    $GCLOUD_DIR
     $path
 )
 
