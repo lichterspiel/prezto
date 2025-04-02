@@ -23,12 +23,11 @@ alias poststop="pg_ctl -D /usr/local/var/postgres stop"
 
 alias pdown="python3 -m http.server 8000"
 
+alias pn="pnpm"
+
 #===== Misc =====
 # The next line enables shell command completion for gcloud.
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
-
-# To use Pyenv Python
-eval "$(pyenv init -)"
 
 #nnn cd on quit
 n ()
@@ -61,3 +60,11 @@ n ()
             rm -f "$NNN_TMPFILE" > /dev/null
     fi
 }
+
+# pnpm
+export PNPM_HOME="/Users/sun/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -13,6 +13,7 @@ fi
 #llvm
 #export PATH=/usr/local/Cellar/llvm/15.0.6/bin:$PATH
 #PATH="/usr/local/opt/llvm/bin:$PATH"
+#export XDG_CONFIG_HOME="~/.config"
 
 # java home directory
 export JAVA_HOME=$(/usr/libexec/java_home)
